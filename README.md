@@ -34,9 +34,6 @@ Bienvenue dans "Où Vous Êtes Le Héros", un jeu interactif écrit en Java où 
    java NomDuFichierPrincipal
    ```
 
-## Contribution
-
-Les contributions sont les bienvenues ! Veuillez lire le fichier `CONTRIBUTING.md` pour savoir comment contribuer.
 
 ## Licence
 
