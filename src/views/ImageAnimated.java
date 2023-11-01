@@ -20,6 +20,8 @@ public class ImageAnimated  {
     private double ratio;
     private int time;
     private MediaPlayer mediaPlayer;
+    private Runnable endAction;
+
 
 
     public ImageAnimated(String dirPath, int time_key, boolean pixel, double ratio, String audioFilePath) {
@@ -122,6 +124,9 @@ public class ImageAnimated  {
         adjustSize(currentImage);
 
         if (currentFrame == framesPath.size() - 1) {
+            if (endAction != null) {
+                endAction.run();
+            }
             currentFrame = 0;
         } else {
             currentFrame++;
@@ -145,5 +150,10 @@ public class ImageAnimated  {
             Image currentImage = new Image(framesPath.get(currentFrame));
             return currentImage;
         }
+    }
+
+
+    public void setEndAction(Runnable callback) {
+        this.endAction = callback;
     }
 }

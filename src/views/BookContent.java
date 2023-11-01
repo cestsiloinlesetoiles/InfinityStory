@@ -4,7 +4,7 @@
     import javafx.scene.image.ImageView;
     import javafx.scene.text.Font;
 
-    public class Book {
+    public class BookContent {
         private static double ratioD = 1.2;
         private static Font fontUi = Font.loadFont("file:src/res/book/font/Silver.ttf", 35);
         private static Font fontText = Font.loadFont("file:src/res/book/font/Silver.ttf", 20);
@@ -25,7 +25,7 @@
 
 
         public static  ImageAnimated getCloseBook(){
-            ImageAnimated closeBook = new ImageAnimated("src/res/book/close", 150, true, ratioD );
+            ImageAnimated closeBook = new ImageAnimated("src/res/book/open", 150, true, ratioD );
             return  closeBook;
         }
 
@@ -52,4 +52,15 @@
         public static Font getFontBookText(){
             return  fontBookText;
         }
+
+        public static ImageAnimated getAppearContent(){
+            ImageAnimated contentAppear = new ImageAnimated("src/res/book/appear", 150, true, ratioD );
+            return  contentAppear;
+        }
+
+        public static ImageAnimated getDisappearContent(){
+            ImageAnimated contentDisAppear = new ImageAnimated("src/res/book/disappear", 150, true, ratioD );
+            return contentDisAppear;
+        }
+
     }

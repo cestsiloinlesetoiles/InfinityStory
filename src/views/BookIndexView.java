@@ -17,10 +17,11 @@ public class BookIndexView extends StackPane {
     public void LoadMenuBook(){
         VBox menu = new VBox(15);
         Button btnPlay = new Button("Play");
-        Button btnInfiniMode = new Button("InfinityMode");
+        Button btnInfiniMode = new Button("Infinity Mode");
         Button btnOptions = new Button("Options");
         Button btnQuit = new Button("Quitter");
         menu.getChildren().addAll(btnPlay, btnInfiniMode, btnOptions, btnQuit);
+        book.disppearContentPage();
         book.loadContentRPage(menu);
 
     }

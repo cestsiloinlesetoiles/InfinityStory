@@ -5,11 +5,11 @@ import javafx.animation.Timeline;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
-public class Enteredtext extends Label {
+public class Typingtext extends Label {
     
     private Timeline timeline;
     
-    public Enteredtext() {
+    public Typingtext() {
         super("");
     }
 
