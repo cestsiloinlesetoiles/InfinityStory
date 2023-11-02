@@ -1,11 +1,12 @@
 package controllers;
 
+import views.BookIndexView;
 import views.ImageAnimated;
 import views.MainView;
 
 public class ContentController {
     private MainView view;
-
+    private BookIndexView index;
 
 
     public void openBtnBook(ImageAnimated img){
@@ -20,7 +21,6 @@ public class ContentController {
         this.view = view;
         System.out.println("----> View set<-----");
     }
-
 
 
 

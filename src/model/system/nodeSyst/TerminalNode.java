@@ -1,4 +1,4 @@
-package model.nodeSyst;
+package model.system.nodeSyst;
 
 public class TerminalNode extends Node{
 

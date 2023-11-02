@@ -1,4 +1,4 @@
-package model.nodeSyst;
+package model.system.nodeSyst;
 
 import java.util.ArrayList;
 import java.util.Random;

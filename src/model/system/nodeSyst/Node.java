@@ -1,9 +1,9 @@
-package model.nodeSyst;
+package model.system.nodeSyst;
 
 public abstract class Node {
 
-    private String description;
-    private int id;
+    protected String description;
+    protected int id;
 
     public Node(String d, int i) {
 

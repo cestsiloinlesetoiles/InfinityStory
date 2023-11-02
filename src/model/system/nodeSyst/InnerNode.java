@@ -1,4 +1,4 @@
-package model.nodeSyst;
+package model.system.nodeSyst;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public abstract class InnerNode extends Node{
 
     /* node dans un tableau*/
 
-    private ArrayList<Node> nextNodes;
+    protected ArrayList<Node> nextNodes;
 
 
     //desc, i , nombre de choix

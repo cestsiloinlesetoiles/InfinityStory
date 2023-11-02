@@ -26,7 +26,7 @@
         private ContentController controller;
         private Typingtext openLabel;
 
-        private boolean wireFrame = true;
+        private boolean wireFrame = false;
 
         private BookIndexView index;
         private StackPane leftPage;
@@ -128,7 +128,7 @@
             leftPage = new StackPane();
             rightPage = new StackPane();
             doublePage = new StackPane();
-            deskContainer.getChildren().addAll(leftPage,rightPage,doublePage);
+            deskContainer.getChildren().addAll(leftPage,rightPage);
 
 
             InitPageContainer();
@@ -182,29 +182,56 @@
 
 
         public void appearContentPage(){
+            if(!deskContainer.getChildren().contains(doublePage)){
+                deskContainer.getChildren().add(doublePage);
+            }
             ImageAnimated appearAnim = BookContent.getAppearContent();
             ImageView appearImg =  appearAnim.getImgView();
             doublePage.getChildren().add(appearImg);
             appearAnim.play();
-            appearAnim.getAnimation().setOnFinished(e->{
-                doublePage.getChildren().remove(appearAnim);
-            });
+            appearAnim.setEndAction(()->  {deskContainer.getChildren().remove(doublePage);});
 
         }
 
         public void disppearContentPage(){
+            if(!deskContainer.getChildren().contains(doublePage)){
+                deskContainer.getChildren().add(doublePage);
+            }
             ImageAnimated disAppearAnim = BookContent.getDisappearContent();
             ImageView disAppearImg =  disAppearAnim.getImgView();
             doublePage.getChildren().add(disAppearImg);
 
-            disAppearAnim.getAnimation().play();
-            disAppearAnim.setEndAction(()->  {deskContainer.getChildren().remove(doublePage);
-            System.out.println("gg");}
+            disAppearAnim.play();
+            disAppearAnim.setEndAction(()->  {deskContainer.getChildren().remove(doublePage);});
+        }
 
-            );
+       public void turnPageR(Pane contentR,Pane contentL){
+           leftPage.getChildren().clear();
+           rightPage.getChildren().clear();
+           ImageAnimated turnL = BookContent.getTurnR();
+           current = turnL.getImgView();
+           turnL.play();
+           turnL.setEndAction(()-> {
+               loadContentLPage(contentR);
+               loadContentRPage(contentL);
+           });
 
+       }
+
+        public void turnPageL(Pane contentR,Pane contentL ){
+            leftPage.getChildren().clear();
+            rightPage.getChildren().clear();
+            ImageAnimated turnR = BookContent.getTurnR();
+            current = turnR.getImgView();
+            turnR.play();
+            turnR.setEndAction(()-> {
+                loadContentLPage(contentR);
+                loadContentRPage(contentL);
+            });
 
 
         }
+
+
 
     }
