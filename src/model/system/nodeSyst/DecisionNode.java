@@ -12,6 +12,7 @@ public class DecisionNode extends InnerNode{
     }
 
     public Node chooseNext(){
+        System.out.println(this.getDescription());
         Scanner sc = new Scanner(System.in);
         System.out.println("Choisissez une des options suivantes:");
         ArrayList<Node> n = this.getNextNodes();

@@ -6,7 +6,7 @@ public abstract class InnerNode extends Node{
 
     /* node dans un tableau*/
 
-    protected ArrayList<Node> nextNodes;
+    private ArrayList<Node> nextNodes;
 
 
     //desc, i , nombre de choix
