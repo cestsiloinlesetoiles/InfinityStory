@@ -14,4 +14,14 @@ public class TerminalNode extends Node{
 
     }
 
+
+    public boolean equals(Object o) {
+        if(!(o instanceof TerminalNode)) return false;
+        return super.equals(o);
+    }
+
+    @Override
+    public String toString() {
+        return "{ Type : TerminalNode \n"+super.toString()+" }" ;
+    }
 }

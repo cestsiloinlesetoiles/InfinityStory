@@ -15,7 +15,7 @@
 
 
 
-    public class MainView extends Application {
+    public class MainGameView extends Application {
         private Stage primaryStage;
         private Scene main;
         private StackPane root;

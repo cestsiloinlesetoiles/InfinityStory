@@ -31,6 +31,21 @@ public abstract class Node {
         System.out.println(this.description);
 
     }
+    @Override
+    public String toString(){
+        return "id = "+id+"\n"+" description =  "+ description +" ";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Node) {
+            Node n = (Node) o;
+            if(this.id == n.id && description.equals(n.getDescription())){
+                return  true;
+            }
+        }
+        return  false;
+    }
 
     public abstract Node chooseNext();
 

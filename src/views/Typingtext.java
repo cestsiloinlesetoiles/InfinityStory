@@ -7,28 +7,33 @@ import javafx.util.Duration;
 
 public class Typingtext extends Label {
     
-    private Timeline timeline;
+    private Timeline animation;
     
     public Typingtext() {
         super("");
     }
-
+    // crée une animation pour typing text
     public void typeText(String text, int delay) {
+        // Permet de crée une chaine de caractére modifiable => String immuable 
         StringBuilder currentText = new StringBuilder();
+
+        animation = new Timeline();
         
-        timeline = new Timeline();
+        
         Duration duration = Duration.millis(delay);
-        for (char c : text.toCharArray()) {
-            KeyFrame keyFrame = new KeyFrame(duration, e -> {
-                currentText.append(c);
-                setText(currentText.toString());
-            });
+        
+        // for each sur l'input
+        for (char t : text.toCharArray()) {
+            // Chaque clé correspond à l'ajout d'un appel currentText.append(t) et on actualise la vu
+            KeyFrame keyFrame = new KeyFrame(duration, e -> { currentText.append(t); setText(currentText.toString()); });
             
-            timeline.getKeyFrames().add(keyFrame);
+            animation.getKeyFrames().add(keyFrame);
+            // Rajout pour chaque ajout  au total time
             duration = duration.add(Duration.millis(delay));
         }
 
-        timeline.play();
+        // r
+        animation.play();
     }
     
 
