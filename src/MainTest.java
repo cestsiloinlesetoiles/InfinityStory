@@ -1,11 +1,9 @@
-import com.sun.jdi.connect.Connector;
-import model.system.nodeSyst.ChanceNode;
 import model.system.nodeSyst.DecisionNode;
 import model.system.nodeSyst.Node;
 import model.system.nodeSyst.TerminalNode;
 
-public class mainTest {
-    public static boolean run = true;
+public class MainTest {
+
     public static void main(String[] args) {
         // Niveau 0
         DecisionNode root = new DecisionNode("Niveau 0 - Racine", 0);

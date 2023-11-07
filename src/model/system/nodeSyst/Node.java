@@ -1,6 +1,9 @@
 package model.system.nodeSyst;
 
-public abstract class Node {
+import model.system.nodeSyst.Decorator.Event;
+
+//implements Event
+public abstract class Node  {
 
     private String description;
     private int id;
@@ -49,6 +52,6 @@ public abstract class Node {
 
     public abstract Node chooseNext();
 
-
+    //public abstract Event chooseNext();
 }
 
