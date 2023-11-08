@@ -21,9 +21,9 @@ public abstract class Companion extends CompanionAttacks {
 
     protected Map<DamageType, Integer> resistances;
 
-    public Companion(String name, int health, int strength, double dodgeChance, Map<DamageType, Integer> attackValues, CompanionType companionType) {
+    public Companion(String name, int health, int strength, double dodgeChance, Map<DamageType, Integer> attackValues, CompanionType companionType, DamageType dt) {
 
-        super(attackValues,companionType);
+        super(attackValues,companionType, dt);
 
         this.name = name;
         this.health = health;
@@ -47,8 +47,8 @@ public abstract class Companion extends CompanionAttacks {
             return TakingDamageStatus.DODGED;
         }
         else{
-            int defense = resistances.get(damageType);
-            damage = Math.max(damage-defense, 0);
+            /*int defense = resistances.get(damageType);
+            damage = Math.max(damage-defense, 0);*/
             health -= damage;
             health = Math.max(health, 0);
             if(health>0){
@@ -73,6 +73,14 @@ public abstract class Companion extends CompanionAttacks {
     public void addAttackDamage(int d){
         this.potionAttack = true;
         this.bonusAttack = d;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public boolean isdead(){
+        return this.health == 0;
     }
 
     @Override

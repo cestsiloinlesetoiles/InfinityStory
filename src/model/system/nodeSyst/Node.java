@@ -1,6 +1,8 @@
 package model.system.nodeSyst;
 
-public abstract class Node {
+import model.system.nodeSyst.decorators.Event;
+
+public abstract class Node implements Event {
 
     private String description;
     private int id;
@@ -35,5 +37,8 @@ public abstract class Node {
     public abstract Node chooseNext();
 
 
+    public boolean equals(Node obj) {
+        return obj.id == this.id;
+    }
 }
 

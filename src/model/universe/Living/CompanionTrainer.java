@@ -9,10 +9,19 @@ public class CompanionTrainer {
     private int level;
     private ArrayList<Companion> companionDex;
 
-    public CompanionTrainer(String name, Companion companion){
+    public CompanionTrainer(String name){
         this.name = name;
         this.companionDex = new ArrayList<>();
-        companionDex.add(companion);
+
+    }
+    public CompanionTrainer(String name, Companion c){
+        this.name = name;
+        this.companionDex = new ArrayList<>();
+        this.companionDex.add(c);
+    }
+
+    public void addCompanionDex(Companion c){
+        this.companionDex.add(c);
     }
 
     public String getName() {

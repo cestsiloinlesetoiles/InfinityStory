@@ -8,7 +8,7 @@ import java.util.Map;
 
 public abstract class IceCompanion extends Companion {
     public IceCompanion(String name){
-        super(name,100,100, 0,new HashMap<>(), CompanionType.Electric);
+        super(name,100,100, 0,new HashMap<>(), CompanionType.Ice,DamageType.ICE);
         Map<DamageType, Integer> attacks = new HashMap<DamageType, Integer>();
         attacks.put(DamageType.ICE,10);
         attacks.put(DamageType.NORMAL,5);

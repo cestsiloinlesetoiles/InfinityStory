@@ -11,10 +11,13 @@ public abstract class CompanionAttacks  {
     private Map<DamageType, Integer> attack;
     private CompanionType companionType;
 
-    public CompanionAttacks( Map<DamageType, Integer> attackValues, CompanionType companionType) {
+    private DamageType specialty;
+
+    public CompanionAttacks( Map<DamageType, Integer> attackValues, CompanionType companionType, DamageType dt) {
 
         this.attack= attackValues;
         this.companionType = companionType;
+        this.specialty = dt;
     }
 
 
@@ -39,4 +42,7 @@ public abstract class CompanionAttacks  {
         this.companionType = companionType;
     }
 
+    public DamageType getSpecialty() {
+        return specialty;
+    }
 }

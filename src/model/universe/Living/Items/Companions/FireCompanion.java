@@ -8,7 +8,7 @@ import java.util.Map;
 
 public abstract class FireCompanion extends Companion{
     public FireCompanion(String name){
-        super(name,100,100, 0,new HashMap<>(), CompanionType.Electric);
+        super(name,100,100, 0,new HashMap<>(), CompanionType.Ice,DamageType.FIRE);
         Map<DamageType, Integer> attacks = new HashMap<DamageType, Integer>();
         attacks.put(DamageType.FIRE,20);
         attacks.put(DamageType.NORMAL,10);
