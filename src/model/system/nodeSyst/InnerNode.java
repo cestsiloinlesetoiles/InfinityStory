@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class InnerNode extends Node{
 
-    /* node dans un tableau*/
+    /* node dans une list*/
 
     private ArrayList<Node> nextNodes;
 
@@ -25,5 +25,29 @@ public abstract class InnerNode extends Node{
    public void fillNextNode(Node n){nextNodes.add(n);}
 
 
+   public String toString(){
+        StringBuilder  t = new StringBuilder();
+        t.append("InnerNodeContent : {\n");
+        t.append(super.toString()+"\n");
+        t.append("ChildNode : ");
+        for(Node n : nextNodes){
+            t.append(n.getId()+", ");
+        }
+       t.append(" }");
 
+      return t.toString();
+   }
+
+    @Override
+    public boolean equals(Object o) {
+        if(!super.equals(o)) return false;
+        if(o instanceof InnerNode){
+                InnerNode n = (InnerNode) o;
+                if(nextNodes.equals(n.getNextNodes())){
+                    return  true;
+                }
+            }
+
+        return false;
+    }
 }

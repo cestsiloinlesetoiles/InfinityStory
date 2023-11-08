@@ -14,7 +14,7 @@ public class DecisionNode extends InnerNode{
     public Node chooseNext(){
         System.out.println(this.getDescription());
         Scanner sc = new Scanner(System.in);
-        System.out.println("Choisissez une des options suivantes:");
+        System.out.println("Choisissez une des options suivantes : ");
         ArrayList<Node> n = this.getNextNodes();
         for(int i = 0; i<n.size(); i++){
            System.out.print(i + " –> ");
@@ -29,6 +29,14 @@ public class DecisionNode extends InnerNode{
         return this.getNextNodes().get(i);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof DecisionNode)) return false;
+        return super.equals(o);
+    }
 
+    public String toString() {
+        return "{ Type : DecisionNode \n"+super.toString()+" }" ;
+    }
 }
 

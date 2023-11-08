@@ -17,4 +17,14 @@ public class ChanceNode extends InnerNode{
 
         return n.get(i);
     }
+
+    public boolean equals(Object o) {
+        if(!(o instanceof ChanceNode)) return false;
+        return super.equals(o);
+    }
+
+
+    public String toString() {
+        return "{ Type : ChanceNode \n"+super.toString()+" }" ;
+    }
 }

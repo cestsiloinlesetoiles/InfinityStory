@@ -2,10 +2,10 @@ package controllers;
 
 import views.BookIndexView;
 import views.ImageAnimated;
-import views.MainView;
+import views.MainGameView;
 
 public class ContentController {
-    private MainView view;
+    private MainGameView view;
     private BookIndexView index;
 
 
@@ -17,7 +17,7 @@ public class ContentController {
 
 
 
-    public void setView(MainView view) {
+    public void setView(MainGameView view) {
         this.view = view;
         System.out.println("----> View set<-----");
     }

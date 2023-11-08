@@ -8,7 +8,7 @@ import javafx.scene.layout.VBox;
 
 public class BookIndexView extends StackPane {
     ContentController controller;
-    MainView book;
+    MainGameView book;
 
     Button btnPlay = new Button("Play");
     Button btnInfiniMode = new Button("Infinity Mode");
@@ -17,7 +17,7 @@ public class BookIndexView extends StackPane {
 
 
 
-    public BookIndexView(ContentController controller, MainView view){
+    public BookIndexView(ContentController controller, MainGameView view){
         this.controller = controller;
         this.book = view;
     }
