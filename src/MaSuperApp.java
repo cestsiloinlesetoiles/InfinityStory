@@ -2,16 +2,16 @@
 import controllers.ContentController;
 import javafx.application.Application;
 import model.system.Game;
-import views.MainView;
+import views.MainGameView;
 
 public class MaSuperApp  {
 
 
 
     public static void main(String[] args) {
-        /*MainView view = new MainView();
-        view.display();*/
-        Game g = new Game();
+        //MainGameView view = new MainGameView();
+        //view.display();
+        Game g = new Game("Test");
 
 
     }

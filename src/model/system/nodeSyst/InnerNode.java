@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class InnerNode extends Node{
 
     /* node dans une list*/
-
+ InnerNode n = new InnerNode()
     private ArrayList<Node> nextNodes;
 
 

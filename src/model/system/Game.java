@@ -1,8 +1,7 @@
 package model.system;
 
 import model.system.nodeSyst.*;
-import model.universe.Living.CompanionTrainer;
-import model.universe.Living.Items.Companions.Elekchu;
+import model.universe.ACorriger.Items.Companions.Elekchu;
 
 public class Game {
 
@@ -27,6 +26,8 @@ public class Game {
         }
 
     }
+
+
 
 
 

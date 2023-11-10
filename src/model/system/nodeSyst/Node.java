@@ -12,6 +12,8 @@ public abstract class Node {
 
     }
 
+
+
     //getters
 
     public String getDescription() {

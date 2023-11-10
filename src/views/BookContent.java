@@ -75,6 +75,7 @@
             return  turnL;
         }
 
-
-
+        public static double getRatioD() {
+            return ratioD;
+        }
     }
