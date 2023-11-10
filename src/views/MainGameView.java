@@ -208,10 +208,10 @@
        public void turnPageR(Pane contentR,Pane contentL){
            leftPage.getChildren().clear();
            rightPage.getChildren().clear();
-           ImageAnimated turnL = BookContent.getTurnR();
-           current = turnL.getImgView();
-           turnL.play();
-           turnL.setEndAction(()-> {
+           ImageAnimated turnR = BookContent.getTurnR();
+           current = turnR.getImgView();
+           turnR.play();
+           turnR.setEndAction(()-> {
                loadContentLPage(contentR);
                loadContentRPage(contentL);
            });
@@ -221,10 +221,10 @@
         public void turnPageL(Pane contentR,Pane contentL ){
             leftPage.getChildren().clear();
             rightPage.getChildren().clear();
-            ImageAnimated turnR = BookContent.getTurnR();
-            current = turnR.getImgView();
-            turnR.play();
-            turnR.setEndAction(()-> {
+            ImageAnimated turnL = BookContent.getTurnR();
+            current = turnL.getImgView();
+            turnL.play();
+            turnL.setEndAction(()-> {
                 loadContentLPage(contentR);
                 loadContentRPage(contentL);
             });

@@ -66,7 +66,7 @@
         }
 
         public static final  ImageAnimated getTurnR(){
-            ImageAnimated turnR = new ImageAnimated("src/res/book/turnD", 150, true, ratioD );
+            ImageAnimated turnR = new ImageAnimated("src/res/book/turnR", 150, true, ratioD );
             return  turnR;
         }
 
