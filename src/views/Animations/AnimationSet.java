@@ -1,4 +1,4 @@
-package views;
+package views.Animations;
 
 import java.util.Map;
 

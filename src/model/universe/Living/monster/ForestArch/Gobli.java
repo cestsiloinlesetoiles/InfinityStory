@@ -1,11 +1,10 @@
 package model.universe.Living.monster.ForestArch;
 
 import model.universe.Enum.DamageType;
-import model.universe.Enum.TakingDamageStatus;
 import model.universe.Interface.Berserker;
 import model.universe.Living.Living;
-import views.BookContent;
-import views.ImageAnimated;
+import views.Media.BookContent;
+import views.Animations.ImageAnimated;
 
 import java.util.HashMap;
 import java.util.Map;

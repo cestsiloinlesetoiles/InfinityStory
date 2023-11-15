@@ -1,4 +1,4 @@
-package views;
+package views.Animations;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

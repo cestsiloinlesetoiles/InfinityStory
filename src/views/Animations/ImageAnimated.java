@@ -1,4 +1,4 @@
-package views;
+package views.Animations;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -22,6 +22,7 @@ public class ImageAnimated  {
     private MediaPlayer mediaPlayer;
     private Runnable endAction;
 
+    private Boolean Log = true;
 
 
     public ImageAnimated(String dirPath, int time_key, boolean pixel, double ratio, String audioFilePath) {
@@ -80,7 +81,9 @@ public class ImageAnimated  {
 
             for (File file : files) {
                 framesPath.add("file:" + file.getPath());
-                System.out.println("Loaded : " + file.getPath());
+                if(Log) {
+                    System.out.println("Loaded : " + file.getPath());
+                }
             }
         }
     }
@@ -118,7 +121,9 @@ public class ImageAnimated  {
     }
 
     private void updateFrame() {
-        System.out.print("Display Frame n° : " + (currentFrame + 1));
+        if(Log) {
+            System.out.print("Display Frame n° : " + (currentFrame + 1));
+        }
         Image currentImage = new Image(framesPath.get(currentFrame));
         imgView.setImage(currentImage);
         adjustSize(currentImage);
@@ -131,9 +136,10 @@ public class ImageAnimated  {
         } else {
             currentFrame++;
         }
-
-        System.out.println(" Speed Frame : " + time);
-        System.out.println(" Next Frame n° : " + (currentFrame + 1));
+        if(Log) {
+            System.out.println(" Speed Frame : " + time);
+            System.out.println(" Next Frame n° : " + (currentFrame + 1));
+        }
     }
 
     private void adjustSize(Image image) {
@@ -155,5 +161,9 @@ public class ImageAnimated  {
 
     public void setEndAction(Runnable callback) {
         this.endAction = callback;
+    }
+
+    public void setLog(Boolean log) {
+        Log = log;
     }
 }

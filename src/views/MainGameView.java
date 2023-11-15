@@ -1,6 +1,6 @@
     package views;
 
-    import controllers.ContentController;
+    import controllers.MainContentController;
     import javafx.application.Application;
     import javafx.geometry.Insets;
     import javafx.geometry.Pos;
@@ -11,8 +11,9 @@
     import javafx.scene.paint.Color;
 
     import javafx.stage.Stage;
-
-
+    import views.Animations.ImageAnimated;
+    import views.Animations.Typingtext;
+    import views.Media.BookContent;
 
 
     public class MainGameView extends Application {
@@ -23,7 +24,7 @@
         private ImageAnimated bookCloseAnimated;
         private ImageView current;
         private Button openBtn;
-        private ContentController controller;
+        private MainContentController controller;
         private Typingtext openLabel;
 
         private boolean wireFrame = false;
@@ -33,6 +34,9 @@
         private StackPane rightPage;
 
         private StackPane doublePage;
+
+        private String currentPage;
+
 
         @Override
         public void start(Stage stage) {
@@ -44,7 +48,7 @@
                 viewWireFrame();
             }
             if(controller == null) {
-                ContentController controller = new ContentController();
+                MainContentController controller = new MainContentController();
                 initController(controller);
             }
 
@@ -112,7 +116,7 @@
 
 
 
-        public void initController(ContentController controller) {
+        public void initController(MainContentController controller) {
             this.controller = controller;
             controller.setView(this);
             System.out.println("----> Controller set <-----");
@@ -124,7 +128,7 @@
 
         public void OpenBook(){
             deskContainer.getChildren().removeAll(openBtn,openLabel);
-            bookCloseAnimated.getAnimation().setOnFinished(e-> {;
+            bookCloseAnimated.setEndAction(()-> {;
             leftPage = new StackPane();
             rightPage = new StackPane();
             doublePage = new StackPane();
@@ -141,7 +145,6 @@
             }
 
                 BookIndexView index = new BookIndexView(controller,this);
-
                 index.LoadMenuBook();
 
             });
@@ -205,33 +208,43 @@
             disAppearAnim.setEndAction(()->  {deskContainer.getChildren().remove(doublePage);});
         }
 
-       public void turnPageR(Pane contentR,Pane contentL){
-           leftPage.getChildren().clear();
-           rightPage.getChildren().clear();
-           ImageAnimated turnR = BookContent.getTurnR();
-           current = turnR.getImgView();
-           turnR.play();
-           turnR.setEndAction(()-> {
-               loadContentLPage(contentR);
-               loadContentRPage(contentL);
-           });
+        public StackPane getLeftPage() {
+            return leftPage;
+        }
 
-       }
-
-        public void turnPageL(Pane contentR,Pane contentL ){
-            leftPage.getChildren().clear();
-            rightPage.getChildren().clear();
-            ImageAnimated turnL = BookContent.getTurnR();
-            current = turnL.getImgView();
-            turnL.play();
-            turnL.setEndAction(()-> {
-                loadContentLPage(contentR);
-                loadContentRPage(contentL);
-            });
-
-
+        public StackPane getRightPage(){
+            return rightPage;
         }
 
 
+        public String getCurrentPage() {
+            return currentPage;
+        }
 
+        public void setCurrentPage(String currentPage) {
+            this.currentPage = currentPage;
+        }
+
+        public ImageView getCurrent() {
+            return current;
+        }
+
+        public void setCurrent(ImageView current) {
+            this.current = current;
+        }
+
+        public StackPane getDeskContainer() {
+            return deskContainer;
+        }
+
+        public StackPane getRoot(){
+            return root;
+        }
+
+        public void unload(){
+            deskContainer.getChildren().removeAll(leftPage,rightPage);
+        }
+        public void load(){
+            deskContainer.getChildren().addAll(leftPage,rightPage);
+        }
     }

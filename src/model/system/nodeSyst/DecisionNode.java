@@ -7,8 +7,10 @@ public class DecisionNode extends InnerNode{
 
     //dans choosenextnode : 1)demande utilisateur choix scanner 2) avec int du choix
 
-    public DecisionNode(String d, int i){
-        super(d,i);
+
+
+    public DecisionNode(String t,String d, int i){
+        super(t,d,i);
     }
 
     public Node chooseNext(){
@@ -38,5 +40,9 @@ public class DecisionNode extends InnerNode{
     public String toString() {
         return "{ Type : DecisionNode \n"+super.toString()+" }" ;
     }
+
+
+
+
 }
 

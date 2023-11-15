@@ -4,21 +4,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public abstract class Node {
-
+    private String title;
     private String description;
     private int id;
-
     private Image img;
-    public Node(String d, int i) {
 
+    public Node(String t, String d, int i) {
+        this.title = t;
         this.description = d;
         this.id = i;
-
     }
 
 
 
-    //getters
 
     public String getDescription() {
         return description;
@@ -46,6 +44,10 @@ public abstract class Node {
 
     public Image getImg() {
         return img;
+    }
+
+    public String getTitle(){
+        return title;
     }
 }
 

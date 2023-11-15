@@ -1,7 +1,4 @@
 
-import controllers.ContentController;
-import javafx.application.Application;
-import model.system.Game;
 import views.MainGameView;
 
 public class MaSuperApp  {

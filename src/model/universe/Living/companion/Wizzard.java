@@ -5,8 +5,8 @@ import model.universe.Enum.TakingDamageStatus;
 import model.universe.Interface.AreaEffectAttack;
 import model.universe.Interface.Buffable;
 import model.universe.Living.Living;
-import views.BookContent;
-import views.ImageAnimated;
+import views.Media.BookContent;
+import views.Animations.ImageAnimated;
 
 import java.util.HashMap;
 import java.util.List;

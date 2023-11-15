@@ -4,17 +4,20 @@ import model.system.nodeSyst.*;
 
 
 public class Game {
+    private int CurrentNode = 0;
 
 
-
-    public Game(String playerName){
+    public Game(){
 
 
 
     }
 
+    public void setIdCurrentNode(int currentNode) {
+        CurrentNode = currentNode;
+    }
 
-
-
-
+    public int getCurrentNode() {
+        return CurrentNode;
+    }
 }

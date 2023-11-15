@@ -2,9 +2,9 @@ package model.system.nodeSyst;
 
 public class TerminalNode extends Node{
 
-    public TerminalNode(String d,int i){
+    public TerminalNode(String t,String d,int i){
 
-        super(d,i);
+        super(t,d,i);
 
     }
 

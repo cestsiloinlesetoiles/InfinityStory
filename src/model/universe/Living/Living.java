@@ -2,7 +2,7 @@ package model.universe.Living;
 
 import model.universe.Enum.DamageType;
 import model.universe.Enum.TakingDamageStatus;
-import views.AnimationSet;
+import views.Animations.AnimationSet;
 
 import java.util.Map;
 

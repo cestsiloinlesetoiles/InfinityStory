@@ -1,14 +1,8 @@
 package model.universe.Living.monster.BrigandArch;
 
-import model.universe.Enum.DamageType;
-import model.universe.Enum.TakingDamageStatus;
 import model.universe.Interface.Stealth;
-import model.universe.Living.Living;
-import views.BookContent;
-import views.ImageAnimated;
-
-import java.util.HashMap;
-import java.util.Map;
+import views.Media.BookContent;
+import views.Animations.ImageAnimated;
 
 public class Bandit_2 extends Brigand implements Stealth {
     // Rajouter ligne AnimSet

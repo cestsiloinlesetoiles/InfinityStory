@@ -1,10 +1,9 @@
-    package views;
+    package views.Media;
 
     import javafx.scene.image.Image;
     import javafx.scene.image.ImageView;
     import javafx.scene.text.Font;
-
-    import java.awt.print.Book;
+    import views.Animations.ImageAnimated;
 
     public class BookContent {
         private static final double ratioD = 1.2;
@@ -26,7 +25,7 @@
         };
 
 
-        public static final  ImageAnimated getCloseBook(){
+        public static final ImageAnimated getCloseBook(){
             ImageAnimated closeBook = new ImageAnimated("src/res/book/open", 150, true, ratioD );
             return  closeBook;
         }
@@ -66,12 +65,12 @@
         }
 
         public static final  ImageAnimated getTurnR(){
-            ImageAnimated turnR = new ImageAnimated("src/res/book/turnR", 150, true, ratioD );
+            ImageAnimated turnR = new ImageAnimated("src/res/book/turnR", 70, true, ratioD );
             return  turnR;
         }
 
         public static final  ImageAnimated getTurnL(){
-            ImageAnimated turnL = new ImageAnimated("src/res/book/turnL", 150, true, ratioD );
+            ImageAnimated turnL = new ImageAnimated("src/res/book/turnL", 70, true, ratioD );
             return  turnL;
         }
 

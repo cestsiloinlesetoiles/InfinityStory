@@ -1,14 +1,19 @@
 package controllers;
 
 import views.BookIndexView;
-import views.ImageAnimated;
+import views.Animations.ImageAnimated;
 import views.MainGameView;
 
-public class ContentController {
+public class MainContentController {
     private MainGameView view;
     private BookIndexView index;
 
+    private NodeViewController nodeViewController;
 
+
+    public MainContentController(){
+        nodeViewController = new NodeViewController();
+    }
     public void openBtnBook(ImageAnimated img){
         img.play();
         view.OpenBook();
@@ -23,5 +28,7 @@ public class ContentController {
     }
 
 
-
+    public NodeViewController getNodeViewController() {
+        return nodeViewController;
+    }
 }

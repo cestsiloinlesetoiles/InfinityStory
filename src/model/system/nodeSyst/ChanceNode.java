@@ -6,8 +6,8 @@ import java.util.Random;
 public class ChanceNode extends InnerNode{
 
     // choosenext : random entre O et tab.length
-    public ChanceNode(String d, int i){
-        super(d,i);
+    public ChanceNode(String t,String d, int i){
+        super(t,d,i);
     }
 
     public Node chooseNext(){

@@ -10,9 +10,9 @@ public abstract class InnerNode extends Node{
 
 
     //desc, i , nombre de choix
-    public InnerNode(String desc, int i) {
+    public InnerNode(String t,String d, int i) {
 
-        super(desc,i);
+        super(t,d,i);
         this.nextNodes = new ArrayList<>();
 
     }
